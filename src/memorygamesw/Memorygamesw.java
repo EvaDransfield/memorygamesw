@@ -6,18 +6,40 @@
 
 package memorygamesw;
 
+import java.util.Scanner;
+
 /**
  *
  * @author KenandEva
  */
 public class Memorygamesw {
-
+    // created two instance variables (or attributes) below
+    String name;
+    String instructions = "Memory is the name of this game! \n\n"
+            + "The purpose of the game is to clear the board of all cards \n\n"
+            + "by matching each card with its \"twin\" when the board is \n\n"
+            + "clear, the game is over. Good Luck! \n\n";
+                 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //Michele was able to clone the repository.
+        Memorygamesw myGame = new Memorygamesw();
+        myGame.getName();
+        myGame.displayHelp();
     }
     
+    //The method or function below asks the Player to input their name
+    public void getName() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        this.name = input.next(); 
+    }
+    
+    //The method or funtion below displays the Players name 
+    //along with the game instructions.
+    public void displayHelp() {
+        System.out.println("+\nWelcome " + this.name + "\n");
+        System.out.println(this.instructions);
+    }
 }
