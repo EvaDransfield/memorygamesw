@@ -23,7 +23,7 @@ public class Board {
     public static final int scale = 2;
     public final String TITLE = "MEMORY GAME";
        
-   // private or public start? 
+   // private or public start, stop, and run? 
     private void start(){
 }
    private void stop(){
@@ -33,7 +33,7 @@ public class Board {
 }
     public static void main(String args[]){
       Board canvas = new Board();
-        JFrame frame= new JFrame (canvas.TITLE);
+      JFrame frame= new JFrame (canvas.TITLE);
       
          
     }
