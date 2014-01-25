@@ -10,8 +10,7 @@ package memorygamesw;
  *
  * @author KenandEva
  */
+/* this class controls the game, update and draws it on the screen*/
+public class Player {
 
-public class Canvas {
-    
-    
 }
