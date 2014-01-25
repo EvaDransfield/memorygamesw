@@ -14,6 +14,7 @@ package memorygamesw;
 
 public class Board {
     
+    
        // create frame for the window,
     // I use static final because those varibale will never gonna change 
     public static final int width=320;// can be changed 
