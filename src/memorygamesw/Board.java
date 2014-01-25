@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package memorygamesw;
 import javax.swing.JFrame;
 
@@ -23,12 +22,13 @@ public class Board {
     public static final int scale = 2;
     public final String TITLE = "MEMORY GAME";
        
-   // private or public start, stop, and run? 
+   // private or public start, stop, and pause.  I changed run to pause because I think run and start are the same thing. MC
+  
     private void start(){
 }
    private void stop(){
 }
-    private void run(){
+    private void pause(){
             
 }
     public static void main(String args[]){

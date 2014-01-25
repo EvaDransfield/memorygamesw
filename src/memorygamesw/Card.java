@@ -10,6 +10,6 @@ package memorygamesw;
  *
  * @author KenandEva
  */
-public class Startgame {
+public class Card {
     
 }
