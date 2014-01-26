@@ -8,8 +8,16 @@ package memorygamesw;
 
 /**
  *
- * @author KenandEva
+ * @author Cope-Michele
  */
 public class Help {
-    
+    //Instructions
+    public String rules = "This will display the Game Rules";
+    //Objective
+    public String objective = "This will display the Game Objective";
+
+public void displayHelp() {
+        System.out.println(this.rules);
+        System.out.println(this.objective);
+    }
 }
