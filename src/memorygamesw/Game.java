@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 
+//Paired Programming Assignment function is called calculateBestTime()
+
 package memorygamesw;
 
 import java.lang.reflect.Array;
 
-/**
- *
+/*
  * @author michelecope
  */
 public class Game {
+
     public Board gameBoard;
     public CardDeck gameDeck;
     public Help gameRules;
@@ -22,6 +24,9 @@ public class Game {
         this.setUpGameBoard();
         this.setUpCardDeck();
         this.setUpGameRules();
+        this.calculateBestTime(55 ,235); /* EVA!!! you should be able to replace the numbers in 
+        the parenthesis with any numbers and our function should output correctly, run it to check.
+        */
     }
     
     public void setUpGameBoard(){
@@ -35,32 +40,51 @@ public class Game {
     public void setUpGameRules() {
         
     }
-
- //paired programming assignment
- private static int recordBest = 120;
- private static int newTime = 90;
- private int newRecordBest;
+    
+    //paired programming assignment
+    
+//    int recordBest = 120; set 120 seconds as record time so we could test this function
+//    int newTime = 90; set the new game time as 90
+//    int secondsBehind; used to calculate how many seconds behind best record the new game time is
+//    int secondsAhead; used to calculate how many seconds ahead best record the new game time is
  
- public static void calculateBestTime (recordBest, newTime) {
-    if (recordBest &&|| newTime == 0 || newTime < 0) 
-    System.out.println("Invalid Time."); 
+ 
+ public void calculateBestTime(int recordBest, int newTime) {
     
-    if (recordBest > newTime)
-    System.out.println("____ behind the current record time.");
+    int secondsBehind;
+    int secondsAhead;
     
-    if (recordBest < newTime)
-    System.out.println("New Record! ____ ahead of previous record time.");
+    if(((recordBest <= 0)&&(newTime <= 0))||(newTime <= 0)) 
+        System.out.println("Invalid Time. \n");
     
-    if (recordBest is N/A)
-    System.out.println("New Record! 0 ahead of previous record time.");
+    else if (recordBest == 0) {
+        System.out.println(+newTime + " Game Time \n");
+        System.out.println("New Record!");
+    }
     
-    if (recordBest == newTime)
-    System.out.println("New Record!");
-}      
+    else if (recordBest < newTime) {
+        secondsBehind = newTime - recordBest;
+        System.out.println(+newTime + " Game Time \n");
+        System.out.println(+ secondsBehind+ " seconds behind the current record time.");
+    }
+    
+    else if (recordBest > newTime) {
+       secondsAhead = recordBest - newTime;
+       System.out.println(+newTime + " Game Time \n");
+       System.out.println("New Record! " +secondsAhead+ " seconds ahead of previous record time.");
+    }
+    
+    else if (recordBest == newTime) {
+        System.out.println(+newTime + " Game Time \n");
+        System.out.println("Tied Game Record!");
+    }
+  
+ }
     //start game
     //create board
     //set up cards on board
     //start timer
     //player plays game
+    //end timer
 }
 
