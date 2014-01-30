@@ -20,10 +20,11 @@ public class Game {
     public Help gameRules;
     public Array gamePlayers;
     
-    public Game(int numberOfPlayers){
-        this.setUpGameBoard();
-        this.setUpCardDeck();
-        this.setUpGameRules();
+    public Game(int numberOfPlayers){ //start game
+
+        this.setUpGameBoard(); //create board
+        this.setUpCardDeck(); //set up cards on board 
+        this.setUpGameRules(); 
         this.calculateBestTime(55 ,235); /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
         */
@@ -80,11 +81,5 @@ public class Game {
     }
   
  }
-    //start game
-    //create board
-    //set up cards on board
-    //start timer
-    //player plays game
-    //end timer
 }
 
