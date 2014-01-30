@@ -36,6 +36,27 @@ public class Game {
         
     }
 
+ //paired programming assignment
+ private static int recordBest = 120;
+ private static int newTime = 90;
+ private int newRecordBest;
+ 
+ public static void calculateBestTime (recordBest, newTime) {
+    if (recordBest &&|| newTime == 0 || newTime < 0) 
+    System.out.println("Invalid Time."); 
+    
+    if (recordBest > newTime)
+    System.out.println("____ behind the current record time.");
+    
+    if (recordBest < newTime)
+    System.out.println("New Record! ____ ahead of previous record time.");
+    
+    if (recordBest is N/A)
+    System.out.println("New Record! 0 ahead of previous record time.");
+    
+    if (recordBest == newTime)
+    System.out.println("New Record!");
+}      
     //start game
     //create board
     //set up cards on board

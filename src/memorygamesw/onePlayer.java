@@ -21,6 +21,7 @@ package memorygamesw;
 // The game is a ties if time : 50<t<100
 // The game is a lose if time : t>100
 
+// Eva's personal assignment function
 public class onePlayer {
     int startingPoints= 100;
     int gameMove= 50;

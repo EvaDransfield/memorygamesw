@@ -26,15 +26,9 @@ public class Board {
   
     private void start(){
 }
-   private void stop(){
+    private void stop(){
 }
     private void pause(){
             
 }
-    public static void main(String args[]){
-      Board canvas = new Board();
-      JFrame frame= new JFrame (canvas.TITLE);
-      
-         
-    }
 }
