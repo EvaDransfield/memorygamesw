@@ -27,6 +27,8 @@ public class Memorygamesw {
         Memorygamesw myGame = new Memorygamesw();
         myGame.getName();
         myGame.displayHelp();
+        Game runBestTimeCalculation = new Game(1); /* this line makes our game capable of running
+        the calculateBestTime function */
     }
     
     //The method or function below asks the Player to input their name
