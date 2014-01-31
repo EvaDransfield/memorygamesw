@@ -25,7 +25,7 @@ public class Game {
         this.setUpGameBoard(); //create board
         this.setUpCardDeck(); //set up cards on board 
         this.setUpGameRules(); 
-        this.calculateBestTime(55 ,235); /* EVA!!! you should be able to replace the numbers in 
+        this.calculateBestTime(55.55,235.55); /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
         */
     }
@@ -50,7 +50,7 @@ public class Game {
 //    int secondsAhead; used to calculate how many seconds ahead best record the new game time is
  
  
- public void calculateBestTime(int recordBest, int newTime) {
+ public void calculateBestTime(double recordBest, double newTime) {
     
     int secondsBehind;
     int secondsAhead;
@@ -64,20 +64,20 @@ public class Game {
     }
     
     else if (recordBest < newTime) {
-        secondsBehind = newTime - recordBest;
+        secondsBehind = (int) (newTime - recordBest);
         System.out.println(+newTime + " Game Time \n");
-        System.out.println(+ secondsBehind+ " seconds behind the current record time.");
+        System.out.println(+ secondsBehind+ " seconds behind the current record time. \n");
     }
     
     else if (recordBest > newTime) {
-       secondsAhead = recordBest - newTime;
+       secondsAhead = (int) (recordBest - newTime);
        System.out.println(+newTime + " Game Time \n");
-       System.out.println("New Record! " +secondsAhead+ " seconds ahead of previous record time.");
+       System.out.println("New Record! " +secondsAhead+ " seconds ahead of previous record time. \n");
     }
     
     else if (recordBest == newTime) {
         System.out.println(+newTime + " Game Time \n");
-        System.out.println("Tied Game Record!");
+        System.out.println("Tied Game Record! \n");
     }
   
  }
