@@ -31,9 +31,10 @@ public class Memorygamesw {
         Game runBestTimeCalculation = new Game(1); /* this line makes our game capable of running
         the calculateBestTime function */
  
-         //Eva linking the onePlayer class to main.
+         //Eva is linking the onePlayer class to main.
         Player onePlayerObject=new Player();
-        onePlayerObject.getWinningScore();
+        onePlayerObject.getWinningScore(200,false);
+        
     }
     
     //The method or function below asks the Player to input their name

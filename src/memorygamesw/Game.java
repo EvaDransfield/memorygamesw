@@ -25,7 +25,8 @@ public class Game {
         this.setUpGameBoard(); //create board
         this.setUpCardDeck(); //set up cards on board 
         this.setUpGameRules(); 
-        this.calculateBestTime(55.55,235.55); /* EVA!!! you should be able to replace the numbers in 
+        this.calculateBestTime(55.55,235.55);  
+         /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
         */
     }
@@ -42,7 +43,7 @@ public class Game {
         
     }
     
-    //paired programming assignment
+ //paired programming assignment
     
 //    int recordBest = 120; set 120 seconds as record time so we could test this function
 //    int newTime = 90; set the new game time as 90
