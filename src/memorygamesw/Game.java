@@ -25,10 +25,12 @@ public class Game {
         this.setUpGameBoard(); //create board
         this.setUpCardDeck(); //set up cards on board 
         this.setUpGameRules(); 
-        this.calculateBestTime(55.55,235.55);  
+        this.calculateBestTime(55.55,235.55);
          /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
         */
+        this.calculateFactorial(5);
+        this.calculateHappiness(12, 4);
     }
     
     public void setUpGameBoard(){
@@ -81,6 +83,41 @@ public class Game {
         System.out.println("Tied Game Record! \n");
     }
   
+ }
+ 
+ public void calculateFactorial(int number) {
+     if (number < 0 || number > 70) {
+         System.out.println("Invalid number.");
+     }
+     if (number < 70 && number > 0) {
+         long num = (long) (number);
+         long factorial = 1;
+         
+         for(int i = 1; i < number; i++) {
+             if(i == 1) {
+                 factorial = num * (num - i);
+             } else {
+                 factorial *= num - i;
+             }
+         }
+         
+         System.out.println("The factorial is: " + factorial);
+     }
+ }
+ 
+ public void calculateHappiness(int totalWins, int totalLosses) {
+     if (totalWins == 0 || totalLosses == 0) {
+         System.out.println("Insufficient Data.");
+     } else if (totalWins > totalLosses) {
+         System.out.println("Yay! You're winning more than you're losing, you "
+                 + "must be happy.\nTotal wins: " + totalWins);
+     } else if (totalWins < totalLosses) {
+         System.out.println("You're losing more games than you're winning, you "
+                 + "must be sad.");
+     } else if (totalWins == totalLosses) {
+         System.out.println("Games won: " + totalWins +"\nTotal Lost: " 
+                 + totalLosses + "\nIts a tie!");
+     }
  }
 }
 
