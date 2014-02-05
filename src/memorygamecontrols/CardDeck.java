@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memorygamesw;
+package memorygamecontrols;
 
 import java.lang.reflect.Array;
 

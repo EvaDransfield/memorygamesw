@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memorygamesw;
+package memorygamecontrols;
 
 import java.util.Scanner;
 
@@ -32,12 +32,12 @@ public class Memorygamesw {
         the calculateBestTime function */
  
          //Eva is linking the onePlayer class to main.
-        Player onePlayerObject=new Player();
+        SelectPlayerControl2 onePlayerObject=new SelectPlayerControl2();
         onePlayerObject.getWinningScore(200,false);
         
     }
     
-    //The method or function below asks the Player to input their name
+    //The method or function below asks the SelectPlayerControl2 to input their name
     public void getName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name: ");

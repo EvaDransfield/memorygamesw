@@ -6,8 +6,10 @@
 
 //Paired Programming Assignment function is called calculateBestTime()
 
-package memorygamesw;
+package memorygamecontrols;
 
+import memorygameviews.HelpMenuView;
+import memorygameviews.MainMenuView1;
 import java.lang.reflect.Array;
 
 /*
@@ -15,9 +17,9 @@ import java.lang.reflect.Array;
  */
 public class Game {
 
-    public Board gameBoard;
+    public MainMenuView1 gameBoard;
     public CardDeck gameDeck;
-    public Help gameRules;
+    public HelpMenuView gameRules;
     public Array gamePlayers;
     
     public Game(int numberOfPlayers){ //start game

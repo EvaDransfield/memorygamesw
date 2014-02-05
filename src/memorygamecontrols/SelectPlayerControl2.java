@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memorygamesw;
+package memorygamecontrols;
 
 /**
  *
@@ -20,7 +20,7 @@ package memorygamesw;
 // The game is a lose if time : t>100
 
 // Eva's individual assignment lesson 3
-public class Player {
+public class SelectPlayerControl2 {
     double startingPoints=115.00;
     int gameMove;
     boolean cards;// true if cards matches, false if not.

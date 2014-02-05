@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package memorygamesw;
+package memorygameviews;
 
 /**
  *
  * @author Cope-Michele
  */
-public class Help {
+public class HelpMenuView {
     //Instructions
     public String rules = "This will display the Game Rules";
     //Objective

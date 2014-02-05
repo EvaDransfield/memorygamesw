@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package memorygamesw;
+package memorygameviews;
 import javax.swing.JFrame;
 
 
@@ -11,8 +11,10 @@ import javax.swing.JFrame;
  *
  * @author KenandEva
  */
-
-public class Board {
+// first appears to the screen
+// this is what you see when first open the program
+// the main menu will have: Easy, Normal, and hard option
+public class MainMenuView1 {
     
     
        // create frame for the window,
