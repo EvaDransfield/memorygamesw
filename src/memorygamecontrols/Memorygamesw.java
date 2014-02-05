@@ -7,7 +7,7 @@
 package memorygamecontrols;
 
 import java.util.Scanner;
-import memorygameviews.HelpMenuView;
+
 /**
  *
  * @author KenandEva
@@ -35,7 +35,6 @@ public class Memorygamesw {
         SelectPlayerControl2 onePlayerObject=new SelectPlayerControl2();
         onePlayerObject.getWinningScore(200,false);
         // HelpMenucntrol class linking
-         HelpMenuControl rundisplayGameObjective= new HelpMenuControl();
         
     }
     
