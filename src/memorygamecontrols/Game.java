@@ -8,7 +8,6 @@
 
 package memorygamecontrols;
 
-import memorygameviews.HelpMenuView;
 import memorygameviews.MainMenuView1;
 import java.lang.reflect.Array;
 
