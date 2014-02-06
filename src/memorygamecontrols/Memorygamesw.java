@@ -31,10 +31,13 @@ public class Memorygamesw {
         Game runBestTimeCalculation = new Game(1); /* this line makes our game capable of running
         the calculateBestTime function */
  
-         //Eva is linking the onePlayer class to main.
+         //linking the onePlayer class to main.
         SelectPlayerControl2 onePlayerObject=new SelectPlayerControl2();
         onePlayerObject.getWinningScore(200,false);
-        // HelpMenucntrol class linking
+        // linking the HelpMenucntrol class to mail
+        HelpMenuControl rundisplayGameObjective= new HelpMenuControl()
+        HelpMenuControl rundisplayOnePlayerHelp= new HelpMenuControl()
+        HelpMenuControl rundisplayTwoPlayerHelp= new HelpMenuControl()
         
     }
     
