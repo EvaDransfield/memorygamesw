@@ -4,15 +4,14 @@
  * and open the template in the editor.
  */
 
-package memorygamecontrols;
+package memorygame;
 
 import java.util.Scanner;
 
 
 
 /**
- *
- * @author jacksonrkj
+ * @author michelecope
  */
 public class HelpMenuView  {
         
@@ -22,16 +21,15 @@ public class HelpMenuView  {
         {"2", "The Two Player Game"},        
         {"Q", "Quit Help"}        
     };
+    //instance of Help Menu
+    private HelpMenuControl HelpMenuControl = new HelpMenuControl();
     
-    // Create instance of the HelpMenuControl (action) class
-    //private HelpMenuControl helpMenuControl = new HelpMenuControl();
-    
-    // default constructor
+    //constructor
     public HelpMenuView() {
         
     } 
     
-    // display the help menu and get the end users input selection
+    // displays HelpMenuControl, gets user input
     public void getInput() {       
               
         String userCommand;
@@ -47,13 +45,13 @@ public class HelpMenuView  {
             
             switch (userCommand) {
                 case "O":
-                    this.helpMenuControl.displayGameObjective();
+                    this.HelpMenuControl.displayGameObjective();
                     break;
                 case "1":
-                    this.helpMenuControl.displayOnePlayerHelp();
+                    this.HelpMenuControl.displayOnePlayerHelp();
                     break;
                 case "2":
-                    this.helpMenuControl.displayTwoPlayerHelp();
+                    this.HelpMenuControl.displayTwoPlayerHelp();
                     break;                   
                 case "Q": 
                     break;

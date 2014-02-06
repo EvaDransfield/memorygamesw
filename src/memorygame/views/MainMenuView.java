@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package memorygame.views;
+/*package memorygame.views;
 import java.util.Scanner;
 import javax.swing.JFrame;
 import memorygame.controls.MainMenuControl;
@@ -17,12 +17,12 @@ import memorygame.controls.MemoryGameError;
 // first appears to the screen
 // this is what you see when first open the program
 // the main menu will have: Easy, Normal, and hard option
-public class MainMenuView {
+    //public class MainMenuView {
     
     
        // create frame for the window,
-    // I use static final because those varibale will never gonna change 
-    
+    // I use static final because those varibale will never change 
+    /*
     public static final int width=320;// can be changed 
     
     public static final int height= width/12*9;
@@ -88,8 +88,4 @@ public class MainMenuView {
         return;
    }
 }
-        
-       
-   
-    
-
+    */

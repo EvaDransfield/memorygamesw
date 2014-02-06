@@ -44,19 +44,19 @@ public class MainMenuView {
        String command;
        Scanner inFile=new Scanner(System.in);
        do {
-           this.display();//display the menu 
+           //this.display();//display the menu 
            
            // get command entered
            command= inFile.nextLine();
-           command=command.trim().toUpperCase;
+           //command=command.trim().toUpperCase;
            
            
            switch (command) {
                case "1":
-                    this.mainMenuControl.startGame(1);
+                   // this.mainMenuControl.startGame(1);
                     break;
                 case "2":
-                    this.mainMenuControl.startGame(2);
+                   // this.mainMenuControl.startGame(2);
                     break;
                 case "X":
                     break;

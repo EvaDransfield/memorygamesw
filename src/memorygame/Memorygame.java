@@ -4,15 +4,21 @@
  * and open the template in the editor.
  */
 
-package memorygamecontrols;
+package memorygame;
 
+import memorygame.HelpMenuControl;
 import java.util.Scanner;
+import memorygame.Game;
+import memorygame.Game;
+import memorygame.HelpMenuControl;
+import memorygame.HelpMenuControl;
+//import memorygamecontrols.SelectPlayerControl2;
 
 /**
  *
  * @author KenandEva
  */
-public class Memorygamesw {
+public class Memorygame {
     // created two instance variables (or attributes) below
     String name;
     String instructions = "Memory is the name of this game! \n\n"
@@ -24,34 +30,30 @@ public class Memorygamesw {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Memorygamesw myGame = new Memorygamesw();
-       
+        Memorygame myGame= new Memorygame();
         myGame.getName();
         myGame.displayHelp();
-        Game runBestTimeCalculation = new Game(1); /* this line makes our game capable of running
-        the calculateBestTime function */
- 
-         //linking the onePlayer class to main.
-        SelectPlayerControl2 onePlayerObject=new SelectPlayerControl2();
-        onePlayerObject.getWinningScore(200,false);
-        // linking the HelpMenucntrol class to mail
-        HelpMenuControl rundisplayGameObjective= new HelpMenuControl()
-        HelpMenuControl rundisplayOnePlayerHelp= new HelpMenuControl()
-        HelpMenuControl rundisplayTwoPlayerHelp= new HelpMenuControl()
         
+        Game runBestTimeCalculation = new Game(1);
+        
+        //linking the HelpMenuView class to main
+        HelpMenuView helpMenu= new HelpMenuView();
+        helpMenu.getInput();
+        
+         //linking the Player class to main.
+        Player onePlayerObject=new Player();
+        onePlayerObject.getWinningScore(200,false);
+
     }
-    
-    //The method or function below asks the SelectPlayerControl2 to input their name
+   
     public void getName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name: ");
         this.name = input.next(); 
     }
     
-    //The method or funtion below displays the Players name 
-    //along with the game instructions.
     public void displayHelp() {
-        System.out.println("+\nWelcome " + this.name + "\n");
+        System.out.println("\nWelcome " + this.name + "\n");
         System.out.println(this.instructions);
     }
 }
