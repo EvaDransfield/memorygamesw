@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package memorygameviews;
+package memorygame;
 
 /**
  *
  * @author Mpianatra
  */
-public class EndResultView {
+public class EndResultControl {
     
 }
