@@ -33,7 +33,7 @@ public class MainMenuControl {
             game = this.createGame("TWO_PLAYER");
         }
 
-        GameMenuView gameMenu = new GameMenuView(game);
+        GameMenuView gameMenu = new GameMenuView();
         gameMenu.getInput();
     }
 

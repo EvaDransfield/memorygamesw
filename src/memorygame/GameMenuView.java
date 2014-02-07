@@ -6,10 +6,18 @@
 
 package memorygame;
 
+import java.util.Scanner;
+
 /**
  *
- * @author Mpianatra
+ * @author Eva
  */
+
+// I created this class and function to link with my main Menu View 
 public class GameMenuView {
     
+        public void getInput() {
+   
+        
+}
 }

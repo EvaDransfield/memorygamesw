@@ -50,8 +50,8 @@ public class MainMenuView {
            
            // get command entered
            command= inFile.nextLine();
-           command=command.trim().toUpperCase;
-           
+           //command=command.trim();
+          
            
            switch (command) {
                case "1":
