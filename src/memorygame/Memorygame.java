@@ -6,16 +6,11 @@
 
 package memorygame;
 
-import memorygame.HelpMenuControl;
 import java.util.Scanner;
-import memorygame.Game;
-import memorygame.Game;
-//import memorygame.HelpMenuControl;
-//import memorygame.HelpMenuControl;
 
 /**
  *
- * @author KenandEva
+ * @author Eva
  */
 public class Memorygame {
     // created two instance variables (or attributes) below
@@ -33,15 +28,23 @@ public class Memorygame {
         myGame.getName();
         myGame.displayHelp();
         
-        Game runBestTimeCalculation = new Game(1);
+       
+        
+         // linking MainenuView class to main
+        MainMenuView mainMenu= new MainMenuView();
+        mainMenu.getInput();
         
         //linking the HelpMenuView class to main
         HelpMenuView helpMenu= new HelpMenuView();
         helpMenu.getInput();
         
+        Game runBestTimeCalculation = new Game(1);
+        
          //linking the Player class to main.
         Player onePlayerObject=new Player();
         onePlayerObject.getWinningScore(200,false);
+        
+       
 
     }
    

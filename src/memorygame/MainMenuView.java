@@ -50,18 +50,21 @@ public class MainMenuView {
            
            // get command entered
            command= inFile.nextLine();
-           //command=command.trim();
+           command=command.trim().toUpperCase();
           
            
            switch (command) {
                case "1":
-                 this.mainMenuControl.startGame(1);
+                 this.mainMenuControl.startGameOnePlayer();
                     break;
                 case "2":
-                 this.mainMenuControl.startGame(2);
+                 this.mainMenuControl.startGameTwoPlayer();
                     break;
+                case "H":
+                    this.mainMenuControl.displayHelpMenu();
                 case "X":
-                    break;
+                    this.mainMenuControl.quitGame();
+                 
                 default: 
                     new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
                  continue;                    
@@ -74,7 +77,7 @@ public class MainMenuView {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
+        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");

@@ -15,11 +15,15 @@ import java.lang.reflect.Array;
  * @author michelecope
  */
 public class Game {
-
-    public MainMenuView gameBoard;
+      
     public CardDeck gameDeck;
     public HelpMenuView gameRules;
     public Array gamePlayers;
+    public static final String EXIT = "EXIT";
+    public static final String PLAYING = "PLAYING"; 
+    public static final String QUIT = "QUIT"; 
+    
+    
     
     public Game(int numberOfPlayers){ //start game
 
