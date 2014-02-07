@@ -10,9 +10,8 @@ import memorygame.HelpMenuControl;
 import java.util.Scanner;
 import memorygame.Game;
 import memorygame.Game;
-import memorygame.HelpMenuControl;
-import memorygame.HelpMenuControl;
-//import memorygamecontrols.SelectPlayerControl2;
+//import memorygame.HelpMenuControl;
+//import memorygame.HelpMenuControl;
 
 /**
  *
