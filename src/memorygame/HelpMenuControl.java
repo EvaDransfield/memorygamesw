@@ -11,8 +11,8 @@ package memorygame;
  * @author Eva
  */
 public class HelpMenuControl {
-    //Eva I believe that line is the Constructor for this class...
-    /*don't know what this line is for ?*/ public HelpMenuControl(){
+    // Constructor 
+   public HelpMenuControl(){
         
     }
  

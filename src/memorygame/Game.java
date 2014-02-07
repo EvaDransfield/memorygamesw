@@ -16,7 +16,7 @@ import java.lang.reflect.Array;
  */
 public class Game {
 
-    public MainMenuView1 gameBoard;
+    public MainMenuView gameBoard;
     public CardDeck gameDeck;
     public HelpMenuView gameRules;
     public Array gamePlayers;
@@ -45,7 +45,7 @@ public class Game {
     public void setUpGameRules() {
         
     }
-    
+      
  //paired programming assignment
     
 //    int recordBest = 120; set 120 seconds as record time so we could test this function
