@@ -13,9 +13,9 @@ package memorygame;
 public class MemoryGameError {
         public Object displayError(Object object) {
         String message = (String) object;
-        System.out.println("\t????????????????????");
-        System.out.println("\t ERROR: " + message);
-        System.out.println("\t????????????????????");
+        System.out.println("\t-------------------------------------------------------------------------");
+        System.out.println("\t ERROR: Uh-Oh, Something isn't right!" + message);
+        System.out.println("\t-------------------------------------------------------------------------");
         return null;
     }
 }

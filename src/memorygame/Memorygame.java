@@ -30,12 +30,16 @@ public class Memorygame {
         
        
         
-         // linking MainenuView class to main
+         // linking MainmenuView class to main
         MainMenuView mainMenu= new MainMenuView();
         mainMenu.getInput();
         
         //linking the HelpMenuView class to main
         HelpMenuView helpMenu= new HelpMenuView();
+        helpMenu.getInput();
+        
+        //linking the OptionsMenuView class to main
+        OptionsMenuView optionsMenu= new OptionsMenuView();
         helpMenu.getInput();
         
         Game runBestTimeCalculation = new Game(1);

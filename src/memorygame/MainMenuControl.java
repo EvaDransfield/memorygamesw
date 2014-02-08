@@ -43,6 +43,11 @@ public class MainMenuControl {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.getInput();
     }
+    
+    public void displayOptionsMenu() {
+        OptionsMenuView optionsMenuView = new OptionsMenuView();
+        optionsMenuView.getInput();
+    }
 
     
 }

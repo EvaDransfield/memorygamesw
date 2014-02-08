@@ -32,6 +32,7 @@ public class MainMenuView {
         {"1", "One player game"},
         {"2", "Two player game"},
         {"H", "Help"},
+        {"O", "Options"},
         {"X", "Exit Memory Game"},
     }; 
     
@@ -55,15 +56,20 @@ public class MainMenuView {
            
            switch (command) {
                case "1":
-                 this.mainMenuControl.startGameOnePlayer();
+                    this.mainMenuControl.startGameOnePlayer();
                     break;
                 case "2":
-                 this.mainMenuControl.startGameTwoPlayer();
+                    this.mainMenuControl.startGameTwoPlayer();
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();
+                    break;
+                case "O":
+                    this.mainMenuControl.displayOptionsMenu();
+                    break;
                 case "X":
                     this.mainMenuControl.quitGame();
+                    break;
                  
                 default: 
                     new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
@@ -74,13 +80,13 @@ public class MainMenuView {
         return;
    }
       public final void display() {
-        System.out.println("\n\t===============================================================");
+        System.out.println("\n\t-------------------------------------------------------------------------");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
-        System.out.println("\t===============================================================\n");
+        System.out.println("\t-------------------------------------------------------------------------\n");
     }
 }
         
