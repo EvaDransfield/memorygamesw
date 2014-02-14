@@ -11,7 +11,35 @@ package memorygame;
  * @author Cope-Michele
  */
 public class Card {
- 
+    
+        boolean showing;// true of false if the hiden card is showing
+    String back; // the hiden symbol at the back of the card
+    int front; //The font of the card 
+    //private String symbol;
+    
+    
+    
+    // constractor 
+    public Card(String theBack, int theFront)
+    {showing=false; // hidden symbole showing the back
+    back=theBack;
+    front=theFront;
+    }
+    public void showCard()
+    {if (showing)
+        System.out.print(String.format("%10s",back));
+    else
+        System.out.print(String.format("%10s","["+front+"]"));
+    
+    }
+    public void setShowingStatus()// this method flips the card from showing to not showing
+    {if (showing)
+        showing=false;
+    else 
+        showing = true;
+
+    }
+    
     private int width = 2;
     private int height = 3;
     private String symbol;
