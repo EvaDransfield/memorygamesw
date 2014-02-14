@@ -11,9 +11,12 @@ package memorygame;
  * @author Cope-Michele
  */
 public class Card {
+ 
     private int width = 2;
     private int height = 3;
     private String symbol;
+   
+
     
     public Card(String symbol) {
         this.symbol = symbol;
@@ -60,4 +63,5 @@ public class Card {
     public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
+
 }

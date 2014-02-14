@@ -124,5 +124,6 @@ public class Game {
                  + totalLosses + "\nIts a tie!");
      }
  }
+ 
 }
 
