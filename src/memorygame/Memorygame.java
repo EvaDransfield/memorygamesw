@@ -42,6 +42,9 @@ public class Memorygame {
         OptionsMenuView optionsMenu= new OptionsMenuView();
         helpMenu.getInput();
         
+        CardView cardView= new CardView("hi", 1);
+        cardView.showCard();
+        
         Game runBestTimeCalculation = new Game(1);
         
          //linking the Player class to main.

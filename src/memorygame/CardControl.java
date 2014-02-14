@@ -21,7 +21,7 @@ public class CardControl {
  * @author Mpianatra
  */
        // declare here 
-    private Card[][]board;
+    private CardView[][]board;
     private String[]words={"Blue","Blue","Red","Red","Green","Green","Yellow","Yellow","Pink","Pink","Purple","Purple","Mena","Mena","Maintso","Maintso"};
     private Random r;
     private Scanner reader;
@@ -32,7 +32,7 @@ public class CardControl {
    { 
        r=new Random();
        reader =new Scanner(System.in);
-       board=new Card[4][4];// create a 4x4 matrix that can hold Carde Objects
+       board=new CardView[4][4];// create a 4x4 matrix that can hold Carde Objects
        shuffle();
        setCells ();
        printCells();
@@ -68,7 +68,7 @@ public class CardControl {
    for (int col=0; col<board[0].length;col++)
     {
        {
-           board[row][col]=new Card (words[a],a); // create a new card object
+           board[row][col]=new CardView (words[a],a); // create a new card object
            a++;
        }
      }
@@ -76,7 +76,7 @@ public class CardControl {
    }
    public void printCells()
    {
-       Card aCard;
+       CardView aCard;
        for (int row=0; row<board.length;row++)
        {
            for (int col=0; col<board[0].length;col++)
