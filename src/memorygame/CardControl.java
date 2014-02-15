@@ -6,7 +6,6 @@
 
 package memorygame;
 
-import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner;
 /**
@@ -18,13 +17,13 @@ public class CardControl {
 
 /**
  *
- * @author Mpianatra
+ * @author Eva
  */
        // declare here 
-    private CardView[][]board;
-    private String[]words={"Blue","Blue","Red","Red","Green","Green","Yellow","Yellow","Pink","Pink","Purple","Purple","Mena","Mena","Maintso","Maintso"};
-    private Random r;
-    private Scanner reader;
+    private final CardView[][]board;
+    private final String[]words={"Blue","Blue","Red","Red","Green","Green","Yellow","Yellow","Pink","Pink","Purple","Purple","Mena","Mena","Maintso","Maintso"};
+    private final Random r;
+    private final Scanner reader;
     int a;
        
      // initialize here
@@ -62,7 +61,7 @@ public class CardControl {
    }
    public void setCells ()
    {
-   //int a=0;
+   
    for (int row=0; row<board.length;row++)
    {
    for (int col=0; col<board[0].length;col++)
@@ -89,10 +88,11 @@ public class CardControl {
        }
            
     }
-
-public void shuffle()
+    //Eva individual assignment
+    @SuppressWarnings("empty-statement")
+    public void shuffle()
 {
-     
+ 
 for (int a=0; a<words.length;a++);
 {
     int pos = r.nextInt(words.length);

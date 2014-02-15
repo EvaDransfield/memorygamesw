@@ -33,6 +33,10 @@ public class Memorygame {
          // linking MainmenuView class to main
         MainMenuView mainMenu= new MainMenuView();
         mainMenu.getInput();
+        CardView cardView= new CardView("hi", 1);
+        cardView.showCard();
+        CardControl cardControl= new CardControl();
+        cardControl.playGame();
         
         //linking the HelpMenuView class to main
         HelpMenuView helpMenu= new HelpMenuView();
@@ -42,8 +46,7 @@ public class Memorygame {
         OptionsMenuView optionsMenu= new OptionsMenuView();
         helpMenu.getInput();
         
-        CardView cardView= new CardView("hi", 1);
-        cardView.showCard();
+        
         
         Game runBestTimeCalculation = new Game(1);
         

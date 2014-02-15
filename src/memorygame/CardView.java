@@ -27,7 +27,7 @@ public class CardView {
         front = theFront;
     }
     
-    private CardControl cardControl = new CardControl(); 
+    private final CardControl cardControl = new CardControl(); 
     
     public void showCard()
     {if (showing)

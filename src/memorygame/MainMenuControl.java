@@ -19,7 +19,8 @@ public class MainMenuControl {
 
 
    public void startGameOnePlayer() {
-       System.out.println("\n\t A game for one player will show here");                
+       
+       //System.out.println("\n\t A game for one player will show here");                
               }
    public void startGameTwoPlayer(){
        System.out.println("\n\t A game for two player will show here");
