@@ -39,12 +39,12 @@ public class Memorygame {
         cardControl.playGame();
         
         //linking the HelpMenuView class to main
-        HelpMenuView helpMenu= new HelpMenuView();
-        helpMenu.getInput();
+        //HelpMenuView helpMenu= new HelpMenuView();
+        //helpMenu.getInput();
         
         //linking the OptionsMenuView class to main
-        OptionsMenuView optionsMenu= new OptionsMenuView();
-        helpMenu.getInput();
+        //OptionsMenuView optionsMenu= new OptionsMenuView();
+        //helpMenu.getInput();
         
         
         

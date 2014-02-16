@@ -21,17 +21,17 @@ public class CardControl {
  */
        // declare here 
     private final CardView[][]board;
-    private final String[]words={"Blue","Blue","Red","Red","Green","Green","Yellow","Yellow","Pink","Pink","Purple","Purple","Mena","Mena","Maintso","Maintso"};
-    private final Random r;
+    private final String[] words={"RED","ORANGE","YELLOW","GREEN","BLUE","PURPLE","INDIGO","BLACK","WHITE","GRAY","BROWN","PINK","GRASS GREEN","SKY BLUE","MAROON"};
+    private final Random randomCard;
     private final Scanner reader;
     int a;
        
      // initialize here
    CardControl()
    { 
-       r=new Random();
-       reader =new Scanner(System.in);
-       board=new CardView[4][4];// create a 4x4 matrix that can hold Carde Objects
+       randomCard = new Random();
+       reader = new Scanner(System.in);
+       board = new CardView[4][4];// create a 4x4 matrix that can hold CardControl Objects
        shuffle();
        setCells ();
        printCells();
@@ -95,7 +95,7 @@ public class CardControl {
  
 for (int a=0; a<words.length;a++);
 {
-    int pos = r.nextInt(words.length);
+    int pos = randomCard.nextInt(words.length);
     String temp = words[a];
     words[a]=words[pos];
     words[pos]=temp;

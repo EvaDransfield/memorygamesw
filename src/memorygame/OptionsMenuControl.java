@@ -13,33 +13,18 @@ package memorygame;
 public class OptionsMenuControl {
     
     public OptionsMenuControl(){
-
-    }
-
-    public void displayOnePlayer(){
-        System.out.println();
-        displayOptionsBorder();
-        System.out.println("\t You have selected to play a One Player Game.");
-    }
-    
-    public void displayTwoPlayer(){
-        System.out.println();
-        displayOptionsBorder();
-        System.out.println("\t You have selected to play a One Player Game.");
     }
     
     public void displayNumberCards(){
         System.out.println();
         displayOptionsBorder();
-        System.out.println("\t You have selected to play a game using cards that \n\n "
-                + "have number faces.");
+        System.out.println("\t You have selected to play a game using cards that have number faces.\n");
     }
     
-    public void displaySymbolCards(){
+    public void displayColorCards(){
         System.out.println();
         displayOptionsBorder();
-        System.out.println("\t You have selected to play a game using cards that \n\n"
-                + "have symbol faces.");
+        System.out.println("\t You have selected to play a game using cards that have color faces.\n");
     }
         
     public void displayOptionsBorder (){

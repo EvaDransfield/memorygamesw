@@ -13,6 +13,7 @@ package memorygame;
 public class CardView {
     
     boolean showing;// true of false if the hiden card is showing
+    boolean matched; // tells weather or not a card is matched
     String back; // the hiden symbol at the back of the card
     int front; //The font of the card 
     //private String symbol;

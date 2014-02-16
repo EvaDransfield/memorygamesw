@@ -15,9 +15,7 @@ public class OptionsMenuView {
     
     private final static String[][] menuChoices = {
         /*not sure if the game will have player choose number of players in main
-        menu or options menu so I added it hear as well.*/
-        {"1","Play A One-Player Game"},
-        {"2","Play A Two-Player Game"},    
+        menu or options menu so I added it hear as well.*/    
         {"N","Play With Numbers On Cards"},
         {"S","Play With Symbols On Cards"},
         {"Q","Quit Options Menu"},
@@ -41,17 +39,12 @@ public class OptionsMenuView {
             userCommand = userCommand.trim().toUpperCase();
             
             switch (userCommand) {
-                case "1":
-                    this.optionsMenuControl.displayOnePlayer();
-                    break;
-                case "2":
-                    this.optionsMenuControl.displayTwoPlayer();
-                    break;
+
                 case "N":
                     this.optionsMenuControl.displayNumberCards();
                     break;
-                case "S":
-                    this.optionsMenuControl.displaySymbolCards();
+                case "C":
+                    this.optionsMenuControl.displayColorCards();
                     break;
                 case "Q":
                     break;
@@ -66,7 +59,7 @@ public class OptionsMenuView {
     
     public void display() {
         System.out.println("\n\t-------------------------------------------------------------------------\n");
-        System.out.println("\n Enter the letter associated with one of the commands.");
+        System.out.println("\tEnter the letter associated with one of the commands.\n");
         
         for (int i = 0; i < OptionsMenuView.menuChoices.length; i++) {
             System.out.println("\t " +menuChoices[i][0] + "\t" + menuChoices [i][1]);

@@ -18,13 +18,12 @@ public class MainMenuControl {
     
 
 
-   public void startGameOnePlayer() {
-       
-       //System.out.println("\n\t A game for one player will show here");                
-              }
+   public void startGameOnePlayer() {       
+        System.out.println("\n\t A game for one player will show here");                
+        }
    public void startGameTwoPlayer(){
-       System.out.println("\n\t A game for two player will show here");
-  }      
+        System.out.println("\n\t A game for two player will show here");
+        }      
    public String quitGame() {
         System.out.println("\n\tAre you sure you want to quit? (Y or N)");
         Scanner inFile = new Scanner(System.in);

@@ -42,6 +42,18 @@ public class Game {
         
     }
     
+    public void removeMatchedCards(CardView[] cardViews){
+        if (cardViews == null) {
+            return;
+        }
+        for (int i = 0; cardViews.length >= i; i++) {
+            if (cardViews[i].matched){
+                cardViews[i].front = 0;
+                cardViews[i].showing = false;
+            }
+        }
+    }
+    
     public void setUpCardDeck(){
         
     }
