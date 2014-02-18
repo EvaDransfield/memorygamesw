@@ -37,8 +37,7 @@ public class Player {
     
        
     public void getWinningScore(int gameMove, boolean cards){
-        
-        int score= (int) (startingPoints)-gameMove;// cast double to int
+       int score= (int) (startingPoints)-gameMove;// cast double to int
                     if ((cards==true)&&(gameMove==15)){
         System.out.println("you win perfect score!: " +score+" points\n");
         }
@@ -55,6 +54,7 @@ public class Player {
         else if((cards==false) && (gameMove>115)){
             System.out.println("invalid input\n");
                 }
+                    
                     
     }
 }

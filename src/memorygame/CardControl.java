@@ -57,7 +57,7 @@ public class CardControl {
        // check the card to see if the "cards" match
        // if they don't call each card's setShowingStatus to "fip" them
    
-                   
+              
    }
    public void setCells ()
    {
@@ -89,7 +89,7 @@ public class CardControl {
            
     }
     //Eva individual assignment
-    @SuppressWarnings("empty-statement")
+    
     public void shuffle()
 {
  
