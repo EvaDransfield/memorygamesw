@@ -20,7 +20,7 @@ package memorygame;
 // The game is a lose if time : t>100
 
 // Eva's individual assignment lesson 3
-public class SelectPlayerControl {
+public class Player {
     double startingPoints=115.00;
     int gameMove;
     boolean cards;// true if cards matches, false if not.
@@ -37,8 +37,7 @@ public class SelectPlayerControl {
     
        
     public void getWinningScore(int gameMove, boolean cards){
-        
-        int score= (int) (startingPoints)-gameMove;// cast double to int
+       int score= (int) (startingPoints)-gameMove;// cast double to int
                     if ((cards==true)&&(gameMove==15)){
         System.out.println("you win perfect score!: " +score+" points\n");
         }
@@ -55,6 +54,7 @@ public class SelectPlayerControl {
         else if((cards==false) && (gameMove>115)){
             System.out.println("invalid input\n");
                 }
+                    
                     
     }
 }
