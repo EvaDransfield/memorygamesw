@@ -22,14 +22,18 @@ public class Game {
     public static final String EXIT = "EXIT";
     public static final String PLAYING = "PLAYING"; 
     public static final String QUIT = "QUIT"; 
+    public static final String ONE_PLAYER = "ONE_PLAYER";
+    public static final String TWO_PLAYER = "TWO_PLAYER";
+    
+    
     
     
     
     public Game(int numberOfPlayers){ //start game
 
-        this.setUpGameBoard(); //create board
-        this.setUpCardDeck(); //set up cards on board 
-        this.setUpGameRules(); 
+       // this.setUpGameBoard(); //create board
+       // this.setUpCardDeck(); //set up cards on board 
+        //this.setUpGameRules(); 
         this.calculateBestTime(55.55,235.55);
          /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
@@ -38,7 +42,7 @@ public class Game {
         this.calculateHappiness(12, 4);
     }
     
-    public void setUpGameBoard(){
+   /* public void setUpGameBoard(){
         
     }
     
@@ -61,6 +65,7 @@ public class Game {
     public void setUpGameRules() {
         
     }
+    */
       
  //paired programming assignment
     
