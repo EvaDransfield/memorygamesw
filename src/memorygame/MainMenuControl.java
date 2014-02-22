@@ -52,5 +52,9 @@ public class MainMenuControl {
         OptionsMenuView optionsMenuView = new OptionsMenuView();
         optionsMenuView.getInput();
     }
+    public void displayStatistics(){
+        Player player = new Player();
+        player.getTotalPoints();
+    }
 }
 

@@ -32,6 +32,8 @@ public class Memorygame {
         
         Game runBestTimeCalculation = new Game(1);
         
+        Player runTotalPoints = new Player();
+        
         PlayerView onePlayerObject=new PlayerView();
         onePlayerObject.getWinningScore(200,false);
         
@@ -51,4 +53,6 @@ public class Memorygame {
     public static void setPlayerList(Player[] playerList) {
         Memorygame.playerList = playerList;
     }
+    
+    
 }

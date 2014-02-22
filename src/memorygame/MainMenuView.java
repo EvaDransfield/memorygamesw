@@ -34,6 +34,7 @@ public class MainMenuView {
         {"2", "Two player game"},
         {"H", "Help"},
         {"O", "Options"},
+        {"S", "Display Statistics"},
         {"X", "Exit Memory Game"},
     }; 
     
@@ -70,6 +71,9 @@ public class MainMenuView {
                     break;
                 case "O":
                     this.mainMenuControl.displayOptionsMenu();
+                    break;
+                case "S":
+                    this.mainMenuControl.displayStatistics();
                     break;
                 case "X":
                     this.mainMenuControl.quitGame();

@@ -57,7 +57,7 @@ public class PlayerView {
                 }              
     }
 
-//get list of players for multiperson game
+//  // Paired Programming Assignment Week 6 - get list of players for multiperson game
     public void PlayerList() {
         
     }
@@ -164,5 +164,6 @@ public class PlayerView {
         }
         System.out.println("\t--------------------------------------------------------------\n");
     }
+    
 }
 
