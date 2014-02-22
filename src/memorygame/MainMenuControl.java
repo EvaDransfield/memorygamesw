@@ -2,21 +2,28 @@ package memorygame;
 
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-
 /**
- *
  * @author Mpianatra
  */
 public class MainMenuControl {
     
-
+    public void createPlayerList() {
+        PlayerView playerView = new PlayerView();
+        String[] playerNameList = playerView.getInput();
+        
+        // creates and adds players to list
+        Player[] playerList = new Player[playerNameList.length];
+                               
+        for (int i = 0; i < playerList.length; i++) {
+            String playersName = playerNameList[i];
+            Player newPlayer = new Player();
+            newPlayer.name = playersName;
+            playerList[i] = newPlayer;          
+        }
+        
+        Memorygame.setPlayerList(playerList);
+        
+    }
 
    public void startGameOnePlayer() {       
         System.out.println("\n\t A game for one player will show here");                
@@ -35,10 +42,7 @@ public class MainMenuControl {
         return Game.PLAYING;
     }
     
-    
-    /*
-     * Display help menu action
-     */
+   //displays other menu's
     public void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.getInput();
@@ -48,7 +52,5 @@ public class MainMenuControl {
         OptionsMenuView optionsMenuView = new OptionsMenuView();
         optionsMenuView.getInput();
     }
-
-    
 }
 

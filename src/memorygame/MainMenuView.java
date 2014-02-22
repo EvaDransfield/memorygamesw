@@ -29,6 +29,7 @@ public class MainMenuView {
     public static final int scale = 2;
     
     private static final String[][] menuItems = {
+        {"N", "Enter player names"},
         {"1", "One player game"},
         {"2", "Two player game"},
         {"H", "Help"},
@@ -55,7 +56,10 @@ public class MainMenuView {
           
            
            switch (command) {
-               case "1":
+                case "N":
+                    this.mainMenuControl.createPlayerList();
+                    break;
+                case "1":
                     this.mainMenuControl.startGameOnePlayer();
                     break;
                 case "2":
