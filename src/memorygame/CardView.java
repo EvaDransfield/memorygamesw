@@ -27,8 +27,12 @@ public class CardView {
         back = theBack;
         front = theFront;
     }
+
+    CardView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
-    private final CardControl cardControl = new CardControl(); 
+    //private final CardControl cardControl = new CardControl(); 
     
     public void showCard()
     {if (showing)

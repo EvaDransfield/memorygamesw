@@ -25,6 +25,7 @@ public class CardControl {
     private final Random randomCard;
     private final Scanner reader;
     int a;
+    int gameMove=0;// guess the player move
        
      // initialize here
    CardControl()
@@ -48,9 +49,15 @@ public class CardControl {
        System.out.println("Enter the number on the card.");
        System.out.print("First Card Choice?>");
        cardChoice =getInputAsInt();
+       gameMove++; //
        row1=cardChoice/4 ;
        col1=cardChoice%4;
        board[row1][col1].setShowingStatus();
+       System.out.print("Second CardView Choice?>");
+       cardChoice =getInputAsInt();
+       row2=cardChoice/4 ;
+       col2=cardChoice%4;
+       board[row2][col2].setShowingStatus();
        
        System.out.print('\u000C'); // Clear the screen
        printCells();
@@ -88,7 +95,7 @@ public class CardControl {
        }
            
     }
-    //Eva individual assignment
+    //Eva individual assignment lesson 6
     
     public void shuffle()
 {
@@ -113,7 +120,8 @@ public int getInputAsInt()
 }
 public String getInputAsString(){
     return reader.nextLine();
-}           
+}
+
     
 }    
 

@@ -26,7 +26,7 @@ public class MainMenuControl {
     }
 
    public void startGameOnePlayer() {       
-        System.out.println("\n\t A game for one player will show here");                
+        this.displayCard();                
         }
    public void startGameTwoPlayer(){
         System.out.println("\n\t A game for two player will show here");
@@ -55,6 +55,10 @@ public class MainMenuControl {
     public void displayStatistics(){
         Player player = new Player();
         player.getTotalPoints();
+    }
+    public void displayCard(){
+    CardView cardView=new CardView();
+    cardView.showCard();
     }
 }
 
