@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class needs to display everything related to the Player class, statistics
+ * player names, ect.  I'm not sure what else this needs to do
  */
 
 package memorygame;
@@ -57,7 +56,7 @@ public class PlayerView {
                 }              
     }
 
-//  // Paired Programming Assignment Week 6 - get list of players for multiperson game
+    // Paired Programming Assignment Week 6 - get list of players for multiperson game
     public void PlayerList() {
         
     }
@@ -65,9 +64,9 @@ public class PlayerView {
         
         Scanner inFile = new Scanner(System.in);
         
-        System.out.println("\n\t----------------------------------------------------------------------");
-        System.out.println("\t You must enter names for two players before starting a two player game.");
-        System.out.println("\t------------------------------------------------------------------------");
+        System.out.println("\n\t________________________________________________________________________");
+        System.out.println("\n\t You must enter names for two players before starting a two player game.");
+        System.out.println("\n\t________________________________________________________________________");
         
         int playerIndex = 0;
         boolean listComplete = false;
@@ -137,7 +136,7 @@ public class PlayerView {
                 } 
             }
         } 
-            return names;
+        return names;
     }
     
     private boolean alreadyListed (String[] list, String value) {
@@ -151,8 +150,8 @@ public class PlayerView {
     }
     
     public void displayNameList(String[] names) {
-        System.out.println("\n\t--------------------------------------------------------------\n");
-        System.out.println("\tHere are the two players in this game.");
+        System.out.println("\n\t______________________________________________________________________");
+        System.out.println("\n\tHere are the two players in this game.");
 
         for (int i = 0; i < names.length; i++) {
             if (names[i] == null) {
@@ -160,10 +159,9 @@ public class PlayerView {
             }
                 
             int namesList = i+1;
-            System.out.println("\t   " + namesList + "\t" + names[i]);
+            System.out.println("\n\t   " + namesList + "\t" + names[i]);
         }
-        System.out.println("\t--------------------------------------------------------------\n");
+        System.out.println("\n\t______________________________________________________________________");
     }
-    
 }
 

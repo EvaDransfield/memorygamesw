@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class is done!
  */
 
 package memorygame;
@@ -11,6 +9,7 @@ import java.util.Scanner;
 /*
  * @author michelewhite
  */
+
 public class OptionsMenuView {
     
     private final static String[][] menuChoices = {
@@ -58,13 +57,13 @@ public class OptionsMenuView {
     }
     
     public void display() {
-        System.out.println("\n\t-------------------------------------------------------------------------\n");
-        System.out.println("\tEnter the letter associated with one of the commands.\n");
+        System.out.println("\n\t______________________________________________________________________");
+        System.out.println("\n\tEnter the letter associated with one of the commands.\n");
         
         for (int i = 0; i < OptionsMenuView.menuChoices.length; i++) {
-            System.out.println("\t " +menuChoices[i][0] + "\t" + menuChoices [i][1]);
+            System.out.println("\n\t " +menuChoices[i][0] + "\t" + menuChoices [i][1]);
         }         
-        System.out.println("\n\t-------------------------------------------------------------------------\n");        
+        System.out.println("\n\t______________________________________________________________________");        
     }
 }
 

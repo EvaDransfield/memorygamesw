@@ -1,25 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class works correctly! 
  */
+
 package memorygame;
 import java.util.Scanner;
 
-
-
-
 /**
- *
  * @author Eva
  */
+
 // first appears to the screen
 // this is what you see when first open the program
 // the main menu will have: Easy, Normal, and hard option
-public class MainMenuView {
-    
-    
-       // create frame for the window,
+public class MainMenuView {  
+    // create frame for the window,
     // I use static final because those varibale will never gonna change 
     
     public static final int width=320;// can be changed 
@@ -38,25 +32,26 @@ public class MainMenuView {
         {"X", "Exit Memory Game"},
     }; 
     
-  // instance of main menu
-   MainMenuControl mainMenuControl=new MainMenuControl();
+    // instance of main menu
+    MainMenuControl mainMenuControl=new MainMenuControl();
    
-   // construtor
-   public MainMenuView(){  }
+    // construtor
+    public MainMenuView(){  
+    
+    }
    
-   // get user input
-   public void getInput()   {
-       String command;
-       Scanner inFile=new Scanner(System.in);
-       do {
-           this.display();//display the menu 
+    // get user input
+    public void getInput(){
+        String command;
+        Scanner inFile=new Scanner(System.in);
+        do {
+            this.display();//display the menu 
            
-           // get command entered
-           command= inFile.nextLine();
-           command=command.trim().toUpperCase();
-          
-           
-           switch (command) {
+            // get command entered
+            command= inFile.nextLine();
+            command=command.trim().toUpperCase();
+         
+            switch (command) {
                 case "N":
                     this.mainMenuControl.createPlayerList();
                     break;
@@ -81,20 +76,21 @@ public class MainMenuView {
                  
                 default: 
                     new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
-                 continue;                    
+                continue;                    
             }
         } while (!command.equals("X"));
 
         return;
-   }
-      public final void display() {
-        System.out.println("\n\t-------------------------------------------------------------------------");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
+    }
+    
+    public final void display() {
+        System.out.println("\n\t______________________________________________________________________");
+        System.out.println("\n\tEnter the letter associated with one of the following commands:");
 
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+            System.out.println("\n\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
-        System.out.println("\t-------------------------------------------------------------------------\n");
+        System.out.println("\n\t______________________________________________________________________");
     }
 }
         

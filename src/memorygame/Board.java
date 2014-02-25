@@ -1,17 +1,12 @@
 package memorygame;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+//I'm not sure if we actually need this class or not.  This class could be covered
+//in our cardView or cardDeck classes.
 
 /**
- *
  * @author Mpianatra
- *//*
+ */
+
+/*
 public class Board {
     
     public void boardSize(){
@@ -28,5 +23,4 @@ public class Board {
     }
 
 }
-
 */

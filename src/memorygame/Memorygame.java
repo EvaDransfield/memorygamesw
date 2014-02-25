@@ -1,3 +1,7 @@
+/*
+ * This class is done!
+ */
+
 package memorygame;
 
 import java.util.Scanner;
@@ -5,15 +9,18 @@ import java.util.Scanner;
 /**
  * @author Eva
  */
+
 public class Memorygame {
     
     //instance variables below
     private static Player[] playerList;
     String name;
-    String instructions = "Memory is the name of this game! \n\n"
-            + "The purpose of the game is to clear the board of all cards \n\n"
-            + "by matching each card with its \"twin\" when the board is \n\n"
-            + "clear, the game is over. Good Luck! \n\n";
+    String instructions = "\n\t______________________________________________________________________"
+                        + "\n\tMemory is the name of this game!"
+                        + "\n\tThe purpose of the game is to clear the board of all cards by matching"
+                        + "\n\teach card with its \"twin\" when the board is clear the game is over."
+                        + "\n\tGood Luck!"
+                        + "\n\t______________________________________________________________________";
                  
     public static void main(String[] args) {
         Memorygame myGame= new Memorygame();
@@ -23,20 +30,6 @@ public class Memorygame {
          // linking class Views to main()
         MainMenuView mainMenu= new MainMenuView();
         mainMenu.getInput();
-        
-        CardView cardView= new CardView("hi", 1);
-        cardView.showCard();
-        
-        CardControl cardControl= new CardControl();
-        cardControl.playGame(); 
-        
-        Game runBestTimeCalculation = new Game(1);
-        
-        Player runTotalPoints = new Player();
-        
-        PlayerView onePlayerObject=new PlayerView();
-        onePlayerObject.getWinningScore(200,false);
-        
     }
     
     public void getName() {
@@ -52,7 +45,5 @@ public class Memorygame {
     //week6 paired programming function
     public static void setPlayerList(Player[] playerList) {
         Memorygame.playerList = playerList;
-    }
-    
-    
+    }    
 }

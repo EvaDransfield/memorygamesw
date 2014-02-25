@@ -1,3 +1,7 @@
+/*
+ * This class is done!
+ */
+
 package memorygame;
 
 import java.util.Scanner;
@@ -24,7 +28,7 @@ public class MainMenuControl {
         Memorygame.setPlayerList(playerList);
         
     }
-
+    
    public void startGameOnePlayer() {       
         this.displayCard();                
         }
@@ -57,8 +61,7 @@ public class MainMenuControl {
         player.getTotalPoints();
     }
     public void displayCard(){
-    CardView cardView=new CardView();
-    cardView.showCard();
+        
     }
 }
 
