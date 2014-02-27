@@ -56,10 +56,10 @@ public class MainMenuView {
                     this.mainMenuControl.createPlayerList();
                     break;
                 case "1":
-                    this.mainMenuControl.startGameOnePlayer();
+                    this.mainMenuControl.startGame(1);
                     break;
                 case "2":
-                    this.mainMenuControl.startGameTwoPlayer();
+                    this.mainMenuControl.startGame(2);
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();

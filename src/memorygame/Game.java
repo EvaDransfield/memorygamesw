@@ -17,27 +17,43 @@ import java.util.Scanner;
  */
 
 public class Game {  
-    // What are all of these strings for?
-    public static final String EXIT = "EXIT";
-    public static final String PLAYING = "PLAYING"; 
-    public static final String QUIT = "QUIT"; 
-    public static final String ONE_PLAYER = "ONE_PLAYER";
-    public static final String TWO_PLAYER = "TWO_PLAYER";
+
+    public static final String ONE_PLAYER_GAME = "ONE_PLAYER";
+    public static final String TWO_PLAYER_GAME = "TWO_PLAYER";
     
-    public CardDeck gameDeck;
+    public static final String NO_ACTIVE_GAME = "NO_GAME_STARTED";
+    public static final String NEW_GAME = "NEW_GAME";
+    public static final String PLAYING = "PLAYING"; 
+    public static final String WINNER = "WINNER"; 
+    public static final String TIE = "TIE"; 
+    public static final String QUIT = "QUIT"; 
+    public static final String ERROR = "ERROR";
+    public static final String EXIT = "EXIT";
+    
+    public String gameType;
+    public Player playerA;
+    public Player playerB;
+    public Player currentPlayer;
+    public Player otherPlayer;
+    public Player winner;
+    public Player loser;
+    public String status;
     public HelpMenuView gameRules;
     public Array gamePlayers;
     private final CardView[][]board;
     private final String[] words={"RED","RED","ORANGE","ORANGE","YELLOW","YELLOW","GREEN","GREEN","BLUE","BLUE","PURPLE","PURPLE","INDIGO","INDIGO","BLACK","BLACK","WHITE","WHITE","GRAY","GRAY","BROWN","BROWN","PINK","PINK","GRASS GREEN","GRASS GREEN","SKY BLUE","SKY BLUE","MAROON","MAROON"};
     private final Random randomCard;
     private final Scanner getInput;
-    int a;//what does a refer to?
-    int gameMove=0;// guess the player move
+    int card;
+    int cardChoice1;
+    int cardChoice2;
+    int gameMove=0;// the player move
+    boolean matched = false;
     
     public Game(){ //start game
         randomCard = new Random();
         getInput = new Scanner(System.in);
-        board = new CardView[4][4];// create a 4x4 matrix that can hold CardControl Objects
+        board = new CardView[6][5];// create a 4x4 matrix that can hold CardControl Objects
         shuffle();
         setCells ();
         printCells();
@@ -50,40 +66,69 @@ public class Game {
         //this.calculateHappiness(12, 4);
     }
     
+    public Game(String gameType) {
+        randomCard = new Random();
+        getInput = new Scanner(System.in);
+        board = new CardView[6][5];// create game "board"
+        playerA = new Player();
+        playerB = new Player();
+        shuffle();
+        setCells ();
+        printCells();
+        playGame();
+        //this.calculateBestTime(55.55,235.55);
+    }
+    
+    
     //this function will call all functions to play the game
     public void playGame(){
        choosePairOfCards();
     }
     
     public void choosePairOfCards(){
-        int cardChoice, row1, col1, row2, col2;
+        int row1, col1, row2, col2;
         System.out.println();
         System.out.println("Enter the number on the card.");
         System.out.print("First Card Choice?>");
-        cardChoice =getInputAsInt();
+        cardChoice1 =getInputAsInt();
         gameMove++; //
-        row1=cardChoice/4 ;
-        col1=cardChoice%4;
+        row1=cardChoice1/6;
+        col1=cardChoice1%5;
         board[row1][col1].setShowingStatus();
-        System.out.print("Second CardView Choice?>");
-        cardChoice =getInputAsInt();
-        row2=cardChoice/4 ;
-        col2=cardChoice%4;
+        System.out.print("Second CardView Choice?>\n");
+        cardChoice2 =getInputAsInt();
+        row2=cardChoice2/6 ;
+        col2=cardChoice2%5;
         board[row2][col2].setShowingStatus();
        
         System.out.print('\u000C'); // Clear the screen
         printCells();
-        // check the card to see if the "cards" match
-        // if they don't call each card's setShowingStatus to "fip" them
+        matchedCards(row1, col1, row2, col2);
+        
     }
+        // check the card to see if the "cards" match
+        // if they don't call each card's setShowingStatus to "flip" them
+    public void matchedCards(int row1, int col1, int row2, int col2){
+        if(board[row1][col1].back == board[row2][col2].back){
+            matched = true;
+            board[row1][col1].matched = true;
+            board[row2][col2].matched = true;
+            System.out.println("You made a match!");
+            board[row1][col1].setShowingStatus();
+            board[row2][col2].setShowingStatus();
+        }
+        else 
+            board[row1][col1].setShowingStatus();
+            board[row2][col2].setShowingStatus();
+   }
    
    public void setCells (){
-       a = 0;//the front of the card
+       card = 0;//the front of the card
        for (int row=0; row<board.length;row++){
            for (int col=0; col<board[0].length;col++){
                {
-               board[row][col]=new CardView (words[a],a); // create a new card object
-               a++;
+               board[row][col]=new CardView (words[card],card); // create a new card object
+               card++;
                }
            }
        }
@@ -102,8 +147,8 @@ public class Game {
     public void shuffle(){
         for(int a=0; a < words.length;a++);{
             int pos = randomCard.nextInt(words.length);
-            String temp = words[a];
-            words[a] = words[pos];
+            String temp = words[card];
+            words[card] = words[pos];
             words[pos] = temp;
         }
     }

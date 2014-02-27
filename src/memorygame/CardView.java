@@ -9,25 +9,25 @@ package memorygame;
 
 public class CardView {
     
-    boolean showing;// true of false if the hiden card is showing
-    boolean matched; // tells weather or not a card is matched
+    boolean showing;// true or false if the hidden card is showing
+    boolean matched; // tells whether or not a card is matched
     String back; // the hiden symbol at the back of the card
     int front; //The font of the card 
     //private String symbol;
   
     // constractor 
-    public CardView(String theBack, int theFront)
-    {
+    public CardView(String theBack, int theFront) {
         showing = false; // showing refers to the back of the cards matching symbol
+        matched = false;
         back = theBack;
         front = theFront;
     }
        
     public void showCard(){
         if (showing)
-        System.out.print(String.format("%10s",back));
+        System.out.print(String.format("\t%10s","["+back+"]"));
     else
-        System.out.print(String.format("%10s","["+front+"]"));
+        System.out.print(String.format("\t%10s","["+front+"]"));
     }
     
     public void setShowingStatus(){// this method flips the card from showing to not showing

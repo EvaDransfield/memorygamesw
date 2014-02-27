@@ -6,7 +6,7 @@ package memorygame;
  * @author Mpianatra
  */
 
-/*
+
 public class Board {
     
     public void boardSize(){
@@ -23,4 +23,3 @@ public class Board {
     }
 
 }
-*/

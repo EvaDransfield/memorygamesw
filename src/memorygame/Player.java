@@ -16,11 +16,21 @@ package memorygame;
 public class Player {
     
     public Player(){
-    
         this.getTotalPoints();
+        
+    }
+    
+    public Player(String userType){
+        
     }
         public String name;
-    
+        public static final String MAIN_USER = "USER_ONE";
+        public static final String SECOND_USER = "USER_TWO";
+        public String playerType;
+        public long wins = 0;
+        public long losses = 0;
+        public long ties = 0;
+        
         double startingPoints=115.00;
         int gameMove;
         boolean cards;// true if cards matches, false if not.
