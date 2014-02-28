@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 
 public class Game {  
-
+    //these tags are used to reference the Game class in other classes.
     public static final String ONE_PLAYER_GAME = "ONE_PLAYER";
     public static final String TWO_PLAYER_GAME = "TWO_PLAYER";
     
@@ -116,11 +116,15 @@ public class Game {
             System.out.println("You made a match!");
             board[row1][col1].setShowingStatus();
             board[row2][col2].setShowingStatus();
+            playGame();
         }
         else 
             board[row1][col1].setShowingStatus();
             board[row2][col2].setShowingStatus();
             playGame();
+//        else
+//            all cards are matched
+//            end game
    }
    
    public void setCells (){
