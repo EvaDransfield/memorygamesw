@@ -35,6 +35,5 @@ public class CardView {
         showing=false;
     else 
         showing = true;
-
     }
 }

@@ -113,18 +113,13 @@ public class Game {
             matched = true;
             board[row1][col1].matched = true;
             board[row2][col2].matched = true;
-            System.out.println("You made a match!");
-            board[row1][col1].setShowingStatus();
-            board[row2][col2].setShowingStatus();
+            System.out.println("You made a match!"); // cards stay flipped over for duration of the game
             playGame();
         }
         else 
             board[row1][col1].setShowingStatus();
             board[row2][col2].setShowingStatus();
             playGame();
-//        else
-//            all cards are matched
-//            end game
    }
    
    public void setCells (){
