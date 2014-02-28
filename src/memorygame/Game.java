@@ -93,7 +93,8 @@ public class Game {
         row1=cardChoice1/6;
         col1=cardChoice1%6;
         board[row1][col1].setShowingStatus();
-        System.out.print("Second CardView Choice?>\n");
+        System.out.print("Second CardView Choice?>");
+        System.out.print("\n");
         cardChoice2 =getInputAsInt();
         row2=cardChoice2/6 ;
         col2=cardChoice2%6;
@@ -119,6 +120,7 @@ public class Game {
         else 
             board[row1][col1].setShowingStatus();
             board[row2][col2].setShowingStatus();
+            playGame();
    }
    
    public void setCells (){
@@ -140,8 +142,7 @@ public class Game {
             }
        System.out.println();
        }    
-   }
-   
+   } 
     
     //Eva individual assignment lesson 6   
     public void shuffle(){

@@ -13,9 +13,8 @@ import java.util.Scanner;
 public class OptionsMenuView {
     
     private final static String[][] menuChoices = {
-        /*not sure if the game will have player choose number of players in main
-        menu or options menu so I added it hear as well.*/    
-        {"N","Play With Numbers On Cards"},
+    
+        {"C","Play With Colors On Cards"},
         {"S","Play With Symbols On Cards"},
         {"Q","Quit Options Menu"},
     };
@@ -39,10 +38,10 @@ public class OptionsMenuView {
             
             switch (userCommand) {
 
-                case "N":
+                case "C":
                     this.optionsMenuControl.displayNumberCards();
                     break;
-                case "C":
+                case "S":
                     this.optionsMenuControl.displayColorCards();
                     break;
                 case "Q":

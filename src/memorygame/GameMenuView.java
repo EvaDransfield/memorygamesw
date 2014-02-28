@@ -18,9 +18,9 @@ public class GameMenuView {
     private MainMenuControl mainMenuControl ;
 
     private final static String[][] menuItems = {
+        {"T","Take your turn"},
         {"D", "Display the board"},
         {"N", "New Game"},
-        {"T","Take your turn"},
         {"H", "Help"},
         {"Q", "QUIT"}
     };
