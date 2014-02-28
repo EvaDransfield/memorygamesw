@@ -77,8 +77,7 @@ public class Game {
         playGame();
         //this.calculateBestTime(55.55,235.55);
     }
-    
-    
+      
     //this function will call all functions to play the game
     public void playGame(){
        choosePairOfCards();
