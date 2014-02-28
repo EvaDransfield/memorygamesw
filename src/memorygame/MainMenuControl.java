@@ -38,14 +38,15 @@ public class MainMenuControl {
         
         Game game;
         if (noPlayers == 1) {
-            game = this.createGame(Game.ONE_PLAYER_GAME);
+         new OptionsMenuView().getInput();
+            //game = this.createGame(Game.ONE_PLAYER_GAME);
         }
         else {
             game = this.createGame(Game.TWO_PLAYER_GAME);
         }
 
-        GameMenuView gameMenu = new GameMenuView(game);
-        gameMenu.getInput();
+     /*   GameMenuView gameMenu = new GameMenuView(game);
+        gameMenu.getInput();*/
     }
     
         private Game createGame(String gameType) {
@@ -99,10 +100,12 @@ public class MainMenuControl {
         helpMenuView.getInput();
     }
     
-    public void displayOptionsMenu() {
+   /* public void displayOptionsMenu() {
         OptionsMenuView optionsMenuView = new OptionsMenuView();
         optionsMenuView.getInput();
     }
+    */
+    
     public void displayStatistics(){
         Player player = new Player();
         player.getTotalPoints();

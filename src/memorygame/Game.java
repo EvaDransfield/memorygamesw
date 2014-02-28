@@ -188,6 +188,7 @@ public class Game {
             System.out.println(+newTime + " Game Time \n");
             System.out.println("Tied Game Record! \n");
         }
+        
     }
  
  

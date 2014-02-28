@@ -17,6 +17,8 @@ package memorygame;
             System.out.println();
             displayOptionsBorder();
             System.out.println("\t You have selected to play a game using cards that have number faces.\n");
+             new Game().playGame(); 
+            // game = this.createGame(Game.ONE_PLAYER_GAME);
         }
     
         public void displayColorCards(){
