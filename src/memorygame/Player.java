@@ -16,7 +16,7 @@ package memorygame;
 public class Player {
     
     public Player(){
-        this.getTotalPoints();
+//        this.getTotalPoints();
         
     }
     

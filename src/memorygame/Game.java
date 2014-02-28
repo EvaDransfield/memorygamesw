@@ -1,9 +1,8 @@
 /*
  * 1.Paired Programming Assignment function is called calculateBestTime()
- * 2.We need to add all functions that run our actual game to this class.
- * 3. We need to make sure the function to playGame works
- * 4. Create function that checks to see if a match has been made
- * 5. We need to create a timer so that we can get statistics for our game.
+ * 2.Make a loop so that player can take a new turn.
+ * 3.Make board sizes within the Board class, and call them into our Game.
+ * 4. We need to create a timer so that we can get statistics for our game.
  */
 
 package memorygame;
@@ -41,7 +40,7 @@ public class Game {
     public HelpMenuView gameRules;
     public Array gamePlayers;
     private final CardView[][]board;
-    private final String[] words={"RED","RED","ORANGE","ORANGE","YELLOW","YELLOW","GREEN","GREEN","BLUE","BLUE","PURPLE","PURPLE","INDIGO","INDIGO","BLACK","BLACK","WHITE","WHITE","GRAY","GRAY","BROWN","BROWN","PINK","PINK","GRASS GREEN","GRASS GREEN","SKY BLUE","SKY BLUE","MAROON","MAROON"};
+    private final String[] words={"RED","RED","ORANGE","ORANGE","YELLOW","YELLOW","GREEN","GREEN","BLUE","BLUE","PURPLE","PURPLE","INDIGO","INDIGO","BLACK","BLACK","WHITE","WHITE","GRAY","GRAY","BROWN","BROWN","PINK","PINK","TURQOUISE","TURQOUISE","AQUA","AQUA","MAROON","MAROON","LIME","LIME","VIOLET","VIOLET","AMBER","AMBER"};
     private final Random randomCard;
     private final Scanner getInput;
     int card;
@@ -53,12 +52,12 @@ public class Game {
     public Game(){ //start game
         randomCard = new Random();
         getInput = new Scanner(System.in);
-        board = new CardView[6][5];// create a 4x4 matrix that can hold CardControl Objects
+        board = new CardView[6][6];// create a 4x4 matrix that can hold CardControl Objects
         shuffle();
         setCells ();
         printCells();
         playGame();
-        this.calculateBestTime(55.55,235.55);
+        //this.calculateBestTime(55.55,235.55);
          /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
         */
@@ -69,7 +68,7 @@ public class Game {
     public Game(String gameType) {
         randomCard = new Random();
         getInput = new Scanner(System.in);
-        board = new CardView[6][5];// create game "board"
+        board = new CardView[6][6];// create game "board"
         playerA = new Player();
         playerB = new Player();
         shuffle();
@@ -93,12 +92,12 @@ public class Game {
         cardChoice1 =getInputAsInt();
         gameMove++; //
         row1=cardChoice1/6;
-        col1=cardChoice1%5;
+        col1=cardChoice1%6;
         board[row1][col1].setShowingStatus();
         System.out.print("Second CardView Choice?>\n");
         cardChoice2 =getInputAsInt();
         row2=cardChoice2/6 ;
-        col2=cardChoice2%5;
+        col2=cardChoice2%6;
         board[row2][col2].setShowingStatus();
        
         System.out.print('\u000C'); // Clear the screen
@@ -106,6 +105,7 @@ public class Game {
         matchedCards(row1, col1, row2, col2);
         
     }
+    
         // check the card to see if the "cards" match
         // if they don't call each card's setShowingStatus to "flip" them
     public void matchedCards(int row1, int col1, int row2, int col2){
@@ -142,6 +142,7 @@ public class Game {
        System.out.println();
        }    
    }
+   
     
     //Eva individual assignment lesson 6   
     public void shuffle(){

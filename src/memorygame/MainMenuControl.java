@@ -107,9 +107,5 @@ public class MainMenuControl {
         Player player = new Player();
         player.getTotalPoints();
     }
-    
-    public void displayCard(){
-        
-    }
 }
 
