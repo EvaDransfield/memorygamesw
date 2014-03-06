@@ -48,6 +48,7 @@ public class Game {
     int cardChoice2;
     int gameMove=0;// the player move
     boolean matched = false;
+    private double startingPoints = 115.00;
     
     public Game(){ //start game
         randomCard = new Random();
@@ -57,6 +58,7 @@ public class Game {
         setCells ();
         printCells();
         playGame();
+        //getTotalPoints();
         //this.calculateBestTime(55.55,235.55);
          /* EVA!!! you should be able to replace the numbers in 
         the parenthesis with any numbers and our function should output correctly, run it to check.
@@ -134,6 +136,7 @@ public class Game {
        }
    }
 
+   //makes the board, fills a grid with card object
    public void printCells(){
        for (int row=0; row<board.length;row++){
            for (int col=0; col<board[0].length;col++){
@@ -189,11 +192,43 @@ public class Game {
         }
         
     }
- 
- 
- 
- 
- 
+    
+    public void getWinningScore(int gameMove, boolean cards){
+        
+        int score= (int) (startingPoints)-gameMove;// cast double to int
+        if ((cards==true)&&(gameMove==15)){
+            System.out.println("you win perfect score!: " +score+" points\n");
+        }
+        else if  ((cards==true) && (gameMove<115)){
+            System.out.println("you win  "+score+" points\n");
+        }        
+        else if((cards==false) && (gameMove==115)){
+            System.out.println("you loose! "+ score+" points\n");
+        }
+        else if((cards==true) && (gameMove<=0)){
+            System.out.println("invalid input\n");
+        }
+        else if((cards==false) && (gameMove>115)){
+            System.out.println("invalid input\n");
+        }            
+    }
+        
+        //Michele's Week 6 individual Assignment (collects and totals a players points)
+    public void getTotalPoints() {    
+        int points[] = {100, 115, 89, 60, 77, 26, 115};
+        int sum = 0;
+        for(int p : points) {
+            System.out.println("\n\tGame Points are: " + p);
+            sum += p;
+        }
+            System.out.println("\n\tTotal Player Points are: " + sum);
+        if(points.length < 1) {
+            new MemoryGameError().displayError("\n\t It looks like you Haven't "
+            + "played yet! Play a game of Memory first to view your statistics");
+        }
+    }
+    
+}
  
  
  
@@ -244,7 +279,5 @@ public class Game {
  *        System.out.println("Games won: " + totalWins +"\nTotal Lost: " 
  *                + totalLosses + "\nIts a tie!");
  *    }
- *}
  */
-}
 
