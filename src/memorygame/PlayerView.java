@@ -5,6 +5,7 @@
 
 package memorygame;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
@@ -21,12 +22,11 @@ import java.util.Scanner;
 // The game is a lose if time : t>100
 
 // Eva's individual assignment lesson 3
-public class PlayerView {
+public class PlayerView implements Serializable{
     
     public String[] playerNameList = new String[2];
-    double startingPoints=115.00;
-    int gameMove;
-    boolean cards;// true if cards matches, false if not.
+    private int gameMove;
+    private boolean cards;// true if cards matches, false if not.
     
     public void setGameMove(int gameMove) {
         this.gameMove = gameMove;
@@ -36,26 +36,6 @@ public class PlayerView {
         this.cards = cards;
     }
      
-    public void getWinningScore(int gameMove, boolean cards){
-       int score= (int) (startingPoints)-gameMove;// cast double to int
-                    if ((cards==true)&&(gameMove==15)){
-        System.out.println("you win perfect score!: " +score+" points\n");
-        }
-        else if  ((cards==true) && (gameMove<115)){
-            System.out.println("you win  "+score+" points\n");
-                }
-                
-        else if((cards==false) && (gameMove==115)){
-            System.out.println("you loose! "+ score+" points\n");
-                }
-        else if((cards==true) && (gameMove<=0)){
-            System.out.println("invalid input\n");
-                }
-        else if((cards==false) && (gameMove>115)){
-            System.out.println("invalid input\n");
-                }              
-    }
-
     // Paired Programming Assignment Week 6 - get list of players for multiperson game
     public void PlayerList() {
         

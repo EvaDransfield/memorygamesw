@@ -2,12 +2,19 @@ package memorygame;
 //I'm not sure if we actually need this class or not.  This class could be covered
 //in our cardView or cardDeck classes.
 
+import java.io.Serializable;
+
+
 /**
  * @author Mpianatra
  */
 
 
-public class Board {
+public class Board implements Serializable{
+
+    public Board() {
+    
+    }
     
     public void boardSize(){
   

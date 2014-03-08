@@ -107,8 +107,8 @@ public class MainMenuControl {
     */
     
     public void displayStatistics(){
-        Game game = new Game();
-        game.getTotalPoints();
+        Player player = new Player();
+        player.getTotalPoints();
     }
 }
 

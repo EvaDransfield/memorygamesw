@@ -10,12 +10,13 @@ package memorygame;
 import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner;
+import java.io.Serializable;
 
 /*
  * @author michelecope
  */
 
-public class Game {  
+public class Game implements Serializable {  
     //these tags are used to reference the Game class in other classes.
     public static final String ONE_PLAYER_GAME = "ONE_PLAYER";
     public static final String TWO_PLAYER_GAME = "TWO_PLAYER";
@@ -29,42 +30,38 @@ public class Game {
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
     
-    public String gameType;
+    private String gameType;
     public Player playerA;
     public Player playerB;
-    public Player currentPlayer;
-    public Player otherPlayer;
-    public Player winner;
-    public Player loser;
+    private Player currentPlayer;
+    private Player otherPlayer;
+    private Player winner;
+    private Player loser;
     public String status;
-    public HelpMenuView gameRules;
-    public Array gamePlayers;
+    private HelpMenuView gameRules;
+    private Array gamePlayers;
+    
     private final CardView[][]board;
     private final String[] words={"RED","RED","ORANGE","ORANGE","YELLOW","YELLOW","GREEN","GREEN","BLUE","BLUE","PURPLE","PURPLE","INDIGO","INDIGO","BLACK","BLACK","WHITE","WHITE","GRAY","GRAY","BROWN","BROWN","PINK","PINK","TURQOUISE","TURQOUISE","AQUA","AQUA","MAROON","MAROON","LIME","LIME","VIOLET","VIOLET","AMBER","AMBER"};
     private final Random randomCard;
     private final Scanner getInput;
-    int card;
-    int cardChoice1;
-    int cardChoice2;
-    int gameMove=0;// the player move
-    boolean matched = false;
+    private int card;
+    private int cardChoice1;
+    private int cardChoice2;
+    private int gameMove=0;// the player move
+    private boolean matched = false;
     private double startingPoints = 115.00;
     
     public Game(){ //start game
         randomCard = new Random();
         getInput = new Scanner(System.in);
-        board = new CardView[6][6];// create a 4x4 matrix that can hold CardControl Objects
+        board = new CardView[6][6];
+        playerA = new Player();
+        playerB = new Player();
         shuffle();
         setCells ();
         printCells();
         playGame();
-        //getTotalPoints();
-        //this.calculateBestTime(55.55,235.55);
-         /* EVA!!! you should be able to replace the numbers in 
-        the parenthesis with any numbers and our function should output correctly, run it to check.
-        */
-        //this.calculateFactorial(5);
-        //this.calculateHappiness(12, 4);
     }
     
     public Game(String gameType) {
@@ -77,9 +74,136 @@ public class Game {
         setCells ();
         printCells();
         playGame();
-        //this.calculateBestTime(55.55,235.55);
     }
-      
+
+    public String getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(String gameType) {
+        this.gameType = gameType;
+    }
+
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public void setPlayerA(Player playerA) {
+        this.playerA = playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
+    }
+
+    public void setPlayerB(Player playerB) {
+        this.playerB = playerB;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    public Player getOtherPlayer() {
+        return otherPlayer;
+    }
+
+    public void setOtherPlayer(Player otherPlayer) {
+        this.otherPlayer = otherPlayer;
+    }
+
+    public Player getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
+
+    public Player getLoser() {
+        return loser;
+    }
+
+    public void setLoser(Player loser) {
+        this.loser = loser;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public HelpMenuView getGameRules() {
+        return gameRules;
+    }
+
+    public void setGameRules(HelpMenuView gameRules) {
+        this.gameRules = gameRules;
+    }
+
+    public Array getGamePlayers() {
+        return gamePlayers;
+    }
+
+    public void setGamePlayers(Array gamePlayers) {
+        this.gamePlayers = gamePlayers;
+    }
+
+    public int getCard() {
+        return card;
+    }
+
+    public void setCard(int card) {
+        this.card = card;
+    }
+
+    public int getCardChoice1() {
+        return cardChoice1;
+    }
+
+    public void setCardChoice1(int cardChoice1) {
+        this.cardChoice1 = cardChoice1;
+    }
+
+    public int getCardChoice2() {
+        return cardChoice2;
+    }
+
+    public void setCardChoice2(int cardChoice2) {
+        this.cardChoice2 = cardChoice2;
+    }
+
+    public int getGameMove() {
+        return gameMove;
+    }
+
+    public void setGameMove(int gameMove) {
+        this.gameMove = gameMove;
+    }
+
+    public boolean isMatched() {
+        return matched;
+    }
+
+    public void setMatched(boolean matched) {
+        this.matched = matched;
+    }
+
+    public double getStartingPoints() {
+        return startingPoints;
+    }
+
+    public void setStartingPoints(double startingPoints) {
+        this.startingPoints = startingPoints;
+    }
+    
     //this function will call all functions to play the game
     public void playGame(){
        choosePairOfCards();
@@ -163,121 +287,5 @@ public class Game {
 
     public String getInputAsString(){
         return getInput.nextLine();
-    }
-    
-    // Paired Programming Assignment
-    public void calculateBestTime(double recordBest, double newTime){
-        int secondsBehind;
-        int secondsAhead;
-    
-        if(((recordBest <= 0)&&(newTime <= 0))||(newTime <= 0)) 
-            System.out.println("Invalid Time. \n");
-        else if (recordBest == 0) {
-            System.out.println(+newTime + " Game Time \n");
-            System.out.println("New Record!");
-        }
-        else if (recordBest < newTime) {
-            secondsBehind = (int) (newTime - recordBest);
-            System.out.println(+newTime + " Game Time \n");
-            System.out.println(+ secondsBehind+ " seconds behind the current record time. \n");
-        } 
-        else if (recordBest > newTime) {
-            secondsAhead = (int) (recordBest - newTime);
-            System.out.println(+newTime + " Game Time \n");
-            System.out.println("New Record! " +secondsAhead+ " seconds ahead of previous record time. \n");
-        }
-        else if (recordBest == newTime) {
-            System.out.println(+newTime + " Game Time \n");
-            System.out.println("Tied Game Record! \n");
-        }
-        
-    }
-    
-    public void getWinningScore(int gameMove, boolean cards){
-        
-        int score= (int) (startingPoints)-gameMove;// cast double to int
-        if ((cards==true)&&(gameMove==15)){
-            System.out.println("you win perfect score!: " +score+" points\n");
-        }
-        else if  ((cards==true) && (gameMove<115)){
-            System.out.println("you win  "+score+" points\n");
-        }        
-        else if((cards==false) && (gameMove==115)){
-            System.out.println("you loose! "+ score+" points\n");
-        }
-        else if((cards==true) && (gameMove<=0)){
-            System.out.println("invalid input\n");
-        }
-        else if((cards==false) && (gameMove>115)){
-            System.out.println("invalid input\n");
-        }            
-    }
-        
-        //Michele's Week 6 individual Assignment (collects and totals a players points)
-    public void getTotalPoints() {    
-        int points[] = {100, 115, 89, 60, 77, 26, 115};
-        int sum = 0;
-        for(int p : points) {
-            System.out.println("\n\tGame Points are: " + p);
-            sum += p;
-        }
-            System.out.println("\n\tTotal Player Points are: " + sum);
-        if(points.length < 1) {
-            new MemoryGameError().displayError("\n\t It looks like you Haven't "
-            + "played yet! Play a game of Memory first to view your statistics");
-        }
-    }
-    
+    } 
 }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /*public void calculateFactorial(int number) {
- *    if (number < 0 || number > 70) {
- *        System.out.println("Invalid number.");
- *    }
- *   if (number < 70 && number > 0) {
- *        long num = (long) (number);
- *        long factorial = 1;
- *        
- *        for(int i = 1; i < number; i++) {
- *            if(i == 1) {
- *                factorial = num * (num - i);
- *            } else {
- *                factorial *= num - i;
- *            }
- *        }
- *
- *
- *        System.out.println("The factorial is: " + factorial);
- *    }
- *}
- *
- *public void calculateHappiness(int totalWins, int totalLosses) {
- *    if (totalWins == 0 || totalLosses == 0) {
- *        System.out.println("Insufficient Data.");
- *   } else if (totalWins > totalLosses) {
- *        System.out.println("Yay! You're winning more than you're losing, you "
- *                + "must be happy.\nTotal wins: " + totalWins);
- *    } else if (totalWins < totalLosses) {
- *        System.out.println("You're losing more games than you're winning, you "
- *                + "must be sad.");
- *   } else if (totalWins == totalLosses) {
- *        System.out.println("Games won: " + totalWins +"\nTotal Lost: " 
- *                + totalLosses + "\nIts a tie!");
- *    }
- */
-

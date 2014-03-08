@@ -6,13 +6,15 @@
 
 package memorygame;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 
 /**
  * @author michelewhite
  */
 
-public class CardDeck {
+public class CardDeck implements Serializable{
+    
     private Array cards;
     private int numberOfCards = 30;
    
